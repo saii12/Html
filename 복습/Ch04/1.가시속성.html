@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1.가시속성</title>
+        <style>
+            div > span {background: orange;}
+            div > div {background: green;}
+
+            .box1 > span:nth-child(1) {display: none;}
+            .box1 > span:nth-child(2) { visibility: hidden;}
+
+            .box2 > span:nth-child(2) {
+                display: block;
+                width: 100px;
+                height: 100px;
+            }
+
+            .box3 > div {
+                display: inline;
+                width: 100px;
+                height: 100px;
+            }
+            
+            .box4 > div {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <h3>1.가시속성</h3>
+
+        <h4>display:none</h4>
+        <div class="box1"> <!--div 이용해서 box1 클래스로 묶음-->
+            <span>TEXT1</span>
+            <span>TEXT2</span>
+            <span>TEXT3</span>
+        </div>
+
+        <h4>display:block</h4>
+        <div class="box2">
+            <span>TEXT1</span>
+            <span>TEXT2</span>
+            <span>TEXT3</span>
+        </div>
+
+        <h4>display:inline</h4>
+        <div class="box3">
+            <span>TEXT1</span>
+            <div>TEXT2</div>
+            <span>TEXT3</span>
+        </div>
+
+        <h4>display:inline-block</h4>
+        <div class="box4">
+            <span>TEXT1</span>
+            <div>TEXT2</div>
+            <span>TEXT3</span>
+        </div>
+    </body>
+</html>
