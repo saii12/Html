@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>4.Layout 실습</title>
+        <style>
+            /* 초기화 */
+            * {
+                margin: 0; /*h3기본 margin을 초기화*/
+                padding: 0;
+            }
+
+            ul, ol { list-style: none;} /*숫자랑 블록 자동으로 생기는거 초기화*/
+            a {text-decoration: none; color: #111;} /*하이퍼링크 촌스러우니까 초기화*/
+
+            #container {
+                width: 800px;
+                height: auto;
+                margin: 0 auto;
+                padding: 10px;
+                background: #aaa;
+                box-sizing: border-box;
+            }
+
+            header {
+                width: 100%;
+                height: 120px;
+                background: #ccc;
+            }
+
+            main {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+                margin: 10px 0;
+                background: #ccc;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            aside {
+                float: right;
+                width: 220px;
+                height: 465px;
+                background: #eee;
+            }
+            /* aside를 float:left section을 float:right 해도 됨 */
+            section{
+                float: right; /* 왜 left하면 aside랑 순서가 바뀌지???* ->float 할 때 순서는 입력된 태그 순서다.(style 태그에서 코딩한 순서는 상관X)*/ 
+                width: 530px;
+                height: auto; /*contents 영역(article)의 크기에 따라 달라짐*/
+                margin-left: 10px;
+                padding: 10px;
+                background: #eee;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            article {
+                float: left;
+                width: 100%;
+                height: 200px;
+                margin-top: 10px;
+                background: #fff;
+            }
+
+            footer {
+                width: 100%;
+                height: 100px;
+                background: #ccc;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h3>header</h3>
+            </header>
+            <main>
+                <h3>main</h3>
+                <section>
+                    <h3>section</h3>
+                    <article>
+                        <h3>article #1</h3>
+                    </article>
+                    <article>
+                        <h3>article #2</h3>
+                    </article>
+                </section>
+                <aside>
+                    <h3>aside</h3>
+                </aside>
+            </main>
+            <footer>
+                <h3>footer</h3>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1.Layout 실습</title>
+        <style>
+            /* 초기화 */
+            * {
+                margin: 0; /*h3기본 margin을 초기화*/
+                padding: 0;
+            }
+
+            ul, ol { list-style: none;} /*숫자랑 블록 자동으로 생기는거 초기화*/
+            a {text-decoration: none; color: #111;} /*하이퍼링크 촌스러우니까 초기화*/
+
+            #container {
+                width: 800px;
+                height: auto;
+                background: #aaa;
+                margin: 0 auto;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            header {
+                width: 100%;
+                height: 120px;
+                background: #ccc;
+            }
+            main {
+                width: 100%;
+                height: 400px;
+                margin: 10px 0;
+                background: #ccc;
+            }
+            footer {
+                width: 100%;
+                height: 100px;
+                background: #ccc;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h3>Header</h3> <!--h3는 기본적으로 margin이 있음-->
+            </header>
+            <main>
+                <h3>Main</h3>
+            </main>
+            <footer>
+                <h3>Footer</h3>
+            </footer>
+        </div>
+    </body>
+</html>

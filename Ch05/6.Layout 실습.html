@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>6.Layout 실습</title>
+        <style>
+            /* 초기화 */
+            * {
+                margin: 0; /*h3기본 margin을 초기화*/
+                padding: 0;
+            }
+
+            ul, ol { list-style: none;} /*숫자랑 블록 자동으로 생기는거 초기화*/
+            a {text-decoration: none; color: #111;} /*하이퍼링크 촌스러우니까 초기화*/
+
+            #container {
+                width: 860px;
+                height: auto;
+                margin: 0 auto;
+                padding: 10px;
+                background: #aaa;
+                box-sizing: border-box;
+            }
+
+            header {
+                width: 100%;
+                height: 120px;
+                background: #ccc;
+            }
+
+            main {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+                padding: 10px;
+                background: #ccc;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            section {
+                float: right;
+                width: 400px;
+                height: 400px;
+                background: #eee;
+            }
+
+            aside {
+                float: left;
+                width: 200px;
+                height: 400px;
+                margin-right: 10px;
+                background: #eee;
+
+            }
+
+            footer {
+                width: 100%;
+                height: 100px;
+                background: #ccc;
+            }
+
+
+        </style>
+    </head>
+    <body>
+    <div id="container">
+        <header>
+            <h3>Header</h3>
+        </header>
+        <main>
+            <h3>Main</h3>
+            <section>
+                <h3>Section</h3>
+            </section>
+            <aside>
+                <h3>Aside #1</h3>
+            </aside>
+            <aside>
+                <h3>Aside #2</h3>
+            </aside>
+        </main>
+        <footer>
+            <h3>Footer</h3>
+        </footer>
+    </div>        
+    </body>
+</html>
