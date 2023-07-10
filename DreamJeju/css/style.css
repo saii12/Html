@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+ 
+ 
+                /* 초기화 */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul, ol {list-style: none;}
+            a {text-decoration: none; color: #111;}
+
+            #container {
+                width: 1200px;
+                height: auto;  /* border 작업은 영역을 눈으로 보기위해 한것, 나중에 다 없앰*/
+                margin: 0 auto;
+            }
+
+            header {
+                width: 100%;
+                height: 100px;
+                background: #0077cc;
+            }
+
+            header > .logo {
+                float: left;
+                font-size: 20px;
+                font-family: 'Merienda', cursive;
+                color: #fff;
+                text-shadow: 0 -1px 0 #222;
+                margin: 16px;
+                
+            }
+
+            header > nav {
+                position: relative;
+                float: right;
+                width: 900px;
+                height: 100px;
+            }
+            header > nav > ul {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+                
+
+            header > nav > ul > li {
+                float: left;
+                width: 200px;
+                height: 60px;
+            }
+
+            header > nav > ul > li > a {
+                display: block;
+                width: 100%;
+                height: 100%; /* a태그는 크기 지정X */ 
+                text-align: center;
+                line-height: 60px; /* 수직정렬 */
+                color: #fff;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            header > nav > ul > li > a:hover {
+                color: #111;
+            }
+            header > nav > ul span {
+                margin-left: 10px;
+            }
+
+            header > nav ol {
+                display: none;
+
+            }
+            header > nav ol > li {}
+            header > nav ol > li > a {}
+
+            main {
+                width: 100%;
+                height: auto;
+            }
+
+            #slideShow {
+                position: relative;
+                width: 100%;
+                height: 300px;
+            }
+
+            #slideShow > section {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            #slideShow > section > img {
+                position: absolute;
+            }
+
+            #slideShow > section > img:nth-child(1) {left: 0; top: 0;}
+
+            #slideShow > section > img:nth-child(2) {left: 100%; top: 0;} /*1200px 대신 100%*/
+            
+            #slideShow > section > img:nth-child(3) {left: 200%; top: 0;}
+            
+            #slideShow > button {
+                position: absolute;
+                padding: 20px;
+                height: 100%;
+                font-size: 24px;
+                font-weight: bold;
+                background: transparent;
+                border: none;
+            }
+            
+            #slideShow > button.left {left: 0; top: 0;}
+            
+            #slideShow > button.right {right: 0; top: 0;}
+            
+            #slideShow > button:hover {
+                background-color: #222;
+                opacity: 0.5;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            #contents {
+                width: 100%;
+                height: auto;
+                overflow: hidden; /*자식이 float 되면 height auto 되 있어서 줄어드는 것*/
+            }
+
+            #tabMenu {
+                float: left;
+                width: 600px;
+                height: 300px;
+                padding-top: 20px;
+            }
+
+            #tabMenu > label { /*inline 태그라 크기 지정 안됨*/
+                display: inline-block;
+                padding: 15px 25px;
+                border: 1px solid #ddd;
+                background: #eee;
+                color: #aaa;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            #tabMenu > label > input[type=radio] { /*하나만 선택가능*/
+                display: none;
+            }
+            #tabMenu > label:first-child {
+                color: #bb0000;
+            }
+            #tabMenu > section {
+                position: relative;
+                width: 100%;
+                height: 246px;
+                box-sizing: border-box;
+                border-top: 1px solid #ddd; /*위에 가장자리*/
+            }
+            #tabMenu > section > article {
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: none;
+                width: 100%;
+                height: 100%;
+                
+            }
+
+            #tabMenu > section > article.on {display: block;}
+
+            #tabMenu > section ul {
+                list-style: disc;
+                margin-left: 36px;
+                margin-top: 26px;
+            }
+            #tabMenu > section > ul > li {
+                margin-bottom: 12px;
+            }
+            #tabMenu > section > ul a {
+                font-size: 16px;
+
+            }
+            #tabMenu > section > ol {}
+            #tabMenu > section > ol > li {}
+            #tabMenu > section > ol a {}
+            #tabMenu > section > ol img {}
+
+            #links {
+                float: left;
+                width: 600px;
+                height: 300px;
+            }
+
+            #links > ul {
+                width: 100%;
+                height: 100%;
+            }
+            #links > ul > li {
+                float: left;
+                width: 33.33%;
+                height: 100%;
+            }
+            #links > ul a {}
+            #links > ul span {
+                display: block;
+                width: 150px;
+                height: 150px;
+                border: 1px solid #ddd;
+                border-radius: 150px;
+                margin: 26px auto; /*순서가 top, 좌우*/
+            }
+
+            #links > ul span.icon1 {background-image: url('../images/icon-1.jpg');}
+            #links > ul span.icon2 {background-image: url('../images/icon-2.jpg');}
+            #links > ul span.icon3 {background-image: url('../images/icon-3.jpg');}
+
+            #links > ul h3 {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            footer {
+                width: 100%;
+                height: 100px;
+                border-top: 2px solid black;
+            }
+
+            #bottomMenu
