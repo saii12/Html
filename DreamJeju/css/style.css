@@ -29,9 +29,7 @@
                 color: #fff;
                 text-shadow: 0 -1px 0 #222;
                 margin: 16px;
-                
             }
-
             header > nav {
                 position: relative;
                 float: right;
@@ -42,15 +40,12 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
-            }
-                
-
+            }   
             header > nav > ul > li {
                 float: left;
                 width: 200px;
                 height: 60px;
             }
-
             header > nav > ul > li > a {
                 display: block;
                 width: 100%;
@@ -85,7 +80,6 @@
                 width: 100%;
                 height: 300px;
             }
-
             #slideShow > section {
                 position: relative;
                 width: 100%;
@@ -95,13 +89,9 @@
             #slideShow > section > img {
                 position: absolute;
             }
-
             #slideShow > section > img:nth-child(1) {left: 0; top: 0;}
-
             #slideShow > section > img:nth-child(2) {left: 100%; top: 0;} /*1200px 대신 100%*/
-            
             #slideShow > section > img:nth-child(3) {left: 200%; top: 0;}
-            
             #slideShow > button {
                 position: absolute;
                 padding: 20px;
@@ -111,11 +101,8 @@
                 background: transparent;
                 border: none;
             }
-            
             #slideShow > button.left {left: 0; top: 0;}
-            
             #slideShow > button.right {right: 0; top: 0;}
-            
             #slideShow > button:hover {
                 background-color: #222;
                 opacity: 0.5;
@@ -135,7 +122,6 @@
                 height: 300px;
                 padding-top: 20px;
             }
-
             #tabMenu > label { /*inline 태그라 크기 지정 안됨*/
                 display: inline-block;
                 padding: 15px 25px;
@@ -164,12 +150,9 @@
                 top: 0;
                 display: none;
                 width: 100%;
-                height: 100%;
-                
+                height: 100%;   
             }
-
             #tabMenu > section > article.on {display: block;}
-
             #tabMenu > section ul {
                 list-style: disc;
                 margin-left: 36px;
@@ -180,7 +163,6 @@
             }
             #tabMenu > section > ul a {
                 font-size: 16px;
-
             }
             #tabMenu > section > ol {}
             #tabMenu > section > ol > li {}
@@ -192,7 +174,6 @@
                 width: 600px;
                 height: 300px;
             }
-
             #links > ul {
                 width: 100%;
                 height: 100%;
@@ -202,7 +183,7 @@
                 width: 33.33%;
                 height: 100%;
             }
-            #links > ul a {}
+            #links > ul a {} 
             #links > ul span {
                 display: block;
                 width: 150px;
@@ -211,11 +192,9 @@
                 border-radius: 150px;
                 margin: 26px auto; /*순서가 top, 좌우*/
             }
-
             #links > ul span.icon1 {background-image: url('../images/icon-1.jpg');}
             #links > ul span.icon2 {background-image: url('../images/icon-2.jpg');}
             #links > ul span.icon3 {background-image: url('../images/icon-3.jpg');}
-
             #links > ul h3 {
                 text-align: center;
                 font-size: 16px;
@@ -227,4 +206,50 @@
                 border-top: 2px solid black;
             }
 
-            #bottomMenu
+            #bottomMenu {
+                width: 100%;
+                height: 20px;
+                position: relative;
+            }
+            #bottomMenu > ul {
+                margin-top: 15px;
+            }
+            #bottomMenu > ul > li {
+                float: left;
+                padding: 5px 20px;
+                border-right: 1px solid #ddd;
+            }
+            #bottomMenu > ul li:last-child { /*sns의 ul도 선택되는 줄 알았는데 id로 구별되서 bottomMenu 안에만 생각하면됨*/
+                border: none; 
+            }
+            #bottomMenu > ul a {
+                font-size: 15px;
+                color: #666;
+                cursor: pointer;
+            }
+
+            #sns {
+                position: absolute; /*left right top bottom 주려고 absolute*/
+                right: 0; 
+            }
+            #sns > ul {
+                margin-top: 15px;
+            } /*#bottomMenu > ul로  이미 적용된 줄 알았는데(bottomMenu 안에 sns있으니까) 아니네 id를 지정해줬으니까 sns안에 있는 건 따로 구별되는갑다*/
+            #sns > ul > li {
+                display: inline; /*inline 또는 inlineblock*/
+                border: none;
+                padding: 5px;
+            }
+            #sns > ul a {} /*그냥 #sns a 해도 되는 것 아닌감???ㅇㅇ 가독성때문에 그런듯*/
+
+            #company {
+                clear: left; /*바로 clear 쓰면 float 이미 한 것 처럼*/
+                margin-top: 25px;
+                margin-left: 20px;
+            }
+            #company > p {
+                font-size: 14px;
+                color: #aaa;
+            }
+
+
