@@ -1,0 +1,173 @@
+
+            /* 초기화 */
+            * {
+                margin: 0;
+                padding: 0;
+                font: normal 12px '돋움';
+            }
+            ul, ol {list-style: none;}
+            a {text-decoration: none; color: #111;}
+
+            #container {
+                width: 100%;
+                height: auto;
+                                 /*우선 경계 넣어서 레이아웃부터 짜기*/
+            }
+
+            header {
+                width: 100%;
+                height: 100px;
+                background-image: url(../images/header_bg.png);
+                background-repeat: repeat-x; /*2px짜리 이미지가 repeat 되는 것*/
+                background-position: bottom;
+            }
+            header > div {
+                position: relative;
+                width: 1000px;
+                height: 100%;
+                margin: 0 auto; 
+            }
+            header > div > .gnb { /*이미지때문에 div 밖으로 나가진것*/
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 28px;
+                box-sizing: border-box;
+            }
+            header > div > .gnb > li {
+                float: left;
+                width: 20%; /*5칸 5분의 1로*/
+                height: 100%;
+                border-left: 1px solid #fff;
+                box-sizing: border-box; /*border선으로 끝에 칸 내려간거 이걸로 고정*/
+            }
+            header > div > .gnb > li:last-child {
+                border-right: 1px solid #fff;
+            }
+            header > div > .gnb > li > a { /*a태그는 inline으로 크기지정안됨*/
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 28px; /*수직으로가운데정렬(행간) 100%*/
+                color: #fff;
+                font-weight: bold;
+                background: #becedb;
+                box-sizing: border-box;
+            }
+            header > div > p {
+                position: absolute;
+                right: 0;
+                top: 10px;
+            }
+            main {
+                width: 1000px;
+                height: auto;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            main > div {
+                width: 100%; /*부모의 width에따라 100%*/
+                height: 620px;
+                margin-top: 24px;
+                background-image: url(../images/main_bg.png);
+                box-sizing: border-box;
+            }
+            main > div > .box {
+                position: relative;
+                float: left;
+                width: 200px;
+                height: 200px;
+            }
+            main > div > .box1 {
+                position: relative;
+                background-image: url(../images/main_box1_bg.png);
+            }
+            main > div > .box1 > img:nth-child(1) {position: absolute; left: 0; top: -25px;}
+            main > div > .box1 > img:nth-child(2) {position: absolute; left: 0; top: 6px;}
+            main > div > .box2 {background-image: url(../images/main_box2_bg.png);} /*배경은 이미지태그로 넣는 게아니라 스타일로 지정하는 것! 가독성때문인듯*/
+            main > div > .box3 {background-image: url(../images/main_box3_bg.png);}
+            main > div > .box3 > img:nth-child(1) {margin-left: 20px;}
+            main > div > .box3 > img:nth-child(2) {margin-top: 5px;}
+            main > div > .box4 {background-image: url(../images/main_box4_bg.png);}
+            main > div > .box5 {background-image: url(../images/main_box5_bg.jpg); clear: left;}
+            main > div > .box6 {background-image: url(../images/main_box6_bg.jpg);}
+            main > div > .box7 {
+                background-image: url(../images/main_box7_bg.png);
+                clear: left;
+                margin-left: 200px;
+            }
+
+            main > div > .box > .tit {position: absolute; left: 18px; top: 24px;}
+            main > div > .box > .txt {position: absolute; left: 18px; top: 58px;}
+            main > div > .box > .img {position: absolute; right: 0; bottom: 0;}
+            main > div > .box > .img2 {float: right;}
+
+
+            main > section {
+                width: 100%;
+                height: 150px;
+                border-top: 1px solid #b9cadc;
+            }
+            main > section > article {
+                float: left;
+                width: 25%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            main > section > article:nth-child(1) > img:nth-child(2) {
+                margin-top: 15px;
+            }
+
+            main > section > article > .sectionhead { /*float하면 다른애들이 공간 차지한다 침범 못하게 하려면 display:block*/
+                display: block; /*display:block 을 하면 이후 태그들 알아서 밑으로 가지네*/
+                margin-top: 20px;
+            }    
+            main > section > article > .table {
+                margin-top: 10px;
+                
+            }
+            main > section > article > .table td { /*자식(바로밑) 일때만 > 쓰는거다! 후손은 > 안쓰고 해야 적용됨*/
+                color: gray;
+                line-height: 18px;
+            }
+            main > section > article > .table a { 
+                color: #555
+            }
+
+            main > section > article:last-child > img:nth-child(1) {
+                display: block;
+            }
+            section > article > a > .galleryimg { /*후손이니까 > 없이 바로 */
+                margin-top: 15px;
+                width: 75px;
+                height: 55px;    
+            }
+
+            footer {
+                width: 1000px;
+                height: 100px;
+                margin: 0 auto;
+                border-top: 1px solid #b9cadc;
+                box-sizing: border-box;
+            }
+            footer > img {
+                float: left; /*이미지가 float 되있을때 무조건 그 밑으로 들어가는 건 아님, 이미지 속성이 inlineblock이라 그옆으로 들어갈 수 도 있다*/
+                padding-top: 14px;
+            }
+            footer > p {
+                font-size: 11px;
+                display: inline-block; /*inline-block 왜 들어감??? float시켜놓은 이미지랑 확실히 구분시키기 위해(inlineblock안쓰면그냥 옆에 이상하게 붙음)*/ 
+                margin-top: 20px;
+                padding-left: 20px;
+                color: #555;
+                line-height: 20px;
+            }
+            footer > p > span {
+                display: inline-block; /*inline-block 차이가 뭐지???*/
+                font-family: Verdana;
+                color: rgb(153, 153, 153);
+                padding-top: 4px;
+            }
